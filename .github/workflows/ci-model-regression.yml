@@ -29,10 +29,10 @@ jobs:
 
     steps:
     - name: Checkout main
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Checkout dataset
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: ${{ secrets.DATASET_REPOSITORY }}
         token: ${{ secrets.ML_TEST_SA_PAT }}
@@ -136,7 +136,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Download gomplate
         run: |-
@@ -199,10 +199,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Checkout dataset
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: ${{ secrets.DATASET_REPOSITORY }}
           token: ${{ secrets.ML_TEST_SA_PAT }}
@@ -271,7 +271,7 @@ jobs:
           fi
 
       - name: Checkout dataset - external
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: steps.set_dataset_config_vars.outputs.is_external == 'true'
         with:
           repository: ${{ env.DATASET }}
@@ -414,10 +414,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Checkout dataset
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: ${{ secrets.DATASET_REPOSITORY }}
           token: ${{ secrets.ML_TEST_SA_PAT }}
@@ -491,7 +491,7 @@ jobs:
           fi
 
       - name: Checkout dataset - external
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: steps.set_dataset_config_vars.outputs.is_external == 'true'
         with:
           repository: ${{ env.DATASET }}
@@ -621,7 +621,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Download an artifact with the results for the schedule version
         run: |
@@ -697,7 +697,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Download an artifact with the results for the schedule version
         run: |
